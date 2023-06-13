@@ -1,0 +1,82 @@
+header {
+    width: 100vw;
+    position: fixed;
+    z-index: 1;
+    background-color: $second-background;
+    padding: 20px;
+}
+
+header .logo-menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .logo-menu img {
+    height: auto;
+    width: 150px;
+    cursor: pointer;
+}
+
+header .logo-menu button {
+    border: none;
+    background-color: $primary-button;
+    border-radius: 5px;
+    padding: 5px;
+    cursor: pointer;
+    font-size: 1.8em;
+    width: 55px;
+}
+
+header .navlinks ul {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+header .navlinks ul li {
+    margin: 15px 0;
+}
+
+header .navlinks ul li button {
+    padding: 15px 60px;
+    border-radius: 20px;
+    border: none;
+    background-color: $primary-button;
+    font-size: 1.1em;
+    transition: 0.5s;
+    cursor: pointer;
+}
+
+header .navlinks ul li button:hover {
+    background: $accent;
+}
+
+@media screen and (min-width: $large-screen) {
+
+    header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    header .logo-menu button {
+        display: none;
+    }
+
+    header .navlinks ul {
+        height: 0;
+        flex-direction: row;
+    }
+
+    header .navlinks ul li {
+        margin: 0 10px;
+    }
+
+    header .navlinks ul li button {
+        padding: 10px 30px;
+        font-size: 1em;
+    }
+}

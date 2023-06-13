@@ -1,0 +1,31 @@
+/*Import Section*****************/
+/*Base theme, breakpoint etc****/
+    @import './data/theme1.scss';
+    @import './data/breakpoint.scss';
+    @import url("https://fonts.googleapis.com/css2?family=Inter:wght@500&display=swap");
+/*Components / pages importation****/
+    @import './components/_navbar';
+    @import './components/_login';
+    @import './components/_inscription';
+    @import './components/_otp';
+    @import './components/_home';
+    @import './components/_404';
+    @import './components/_forget-password';
+    @import './components/_reset-password';
+/**************************/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;   
+    list-style-type: none;
+    color: $text
+}
+
+#root {
+    height: 100vh;
+    width: 100vw;
+    background-color: $background;
+}
+

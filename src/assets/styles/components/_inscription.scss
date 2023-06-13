@@ -1,0 +1,44 @@
+.inscription {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.inscription form {
+  background-color: $second-background;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 360px;
+  padding: 30px;
+  border-radius: 10px;
+}
+
+.inscription form button {
+  margin: 20px 0px;
+  padding: 10px 40px;
+  background-color: $primary-button;
+  border: none;
+  border-radius: 20px;
+  transition: 0.5s;
+  cursor: pointer;
+}
+
+.inscription form button:hover {
+  background: $accent;
+}
+
+.inscription form .error {
+  color: $error;
+  font-size: 0.9em;
+  text-align: center;
+}
+
+.inscription .account {
+  cursor: pointer;
+}
+.inscription .account a {
+  text-decoration: underline $text;
+}

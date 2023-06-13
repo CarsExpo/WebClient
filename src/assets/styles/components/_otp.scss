@@ -1,0 +1,73 @@
+.otp-con {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.otp-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.otp-field {
+    display: flex;   
+    margin: 20px 0px;
+}
+
+.otp-field input {
+    width: 55px;
+    font-size: 32px;
+    padding: 10px;
+    text-align: center;
+    border-radius: 5px;
+    margin: 2px;
+    border: 2px solid #55525c;
+    background: #21232d;
+    font-weight: bold;
+    color: $text;
+    outline: none;
+    transition: all 0.1s;
+}
+
+.otp-field input:focus {
+    border: 2px solid $accent;
+    box-shadow: 0 0 2px 2px $accent;
+}
+
+.disabled {
+    opacity: 0.5;
+}
+
+.space {
+    margin-right: 1rem !important;
+}
+
+.otp-con .error-msg {
+    font-size: 1em;
+    margin: 10px
+}
+
+.otp-con button {
+    margin: 10px 0px;
+    height: 45px;
+    width: 210px;
+    background-color: $primary-button;
+    border: none;
+    border-radius: 50px;
+    -webkit-border-radius: 50px;
+    -moz-border-radius: 50px;
+    font-size: 01em;
+    cursor: pointer;
+    -webkit-transition: ease-out 0.4s;
+    -moz-transition: ease-out 0.4s;
+    transition: ease-out 0.4s;
+}
+
+.otp-con button:hover {
+    box-shadow: inset 400px 0 0 0 $text;
+    color: $accent;
+}

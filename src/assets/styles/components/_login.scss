@@ -1,0 +1,116 @@
+.login {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.login form {
+  background-color: $second-background;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 360px;
+  padding: 30px;
+  border-radius: 10px;
+}
+
+.form__group {
+  position: relative;
+  padding: 15px 0 0;
+  margin-top: 10px;
+  width: 70%;
+}
+
+.form__field {
+  font-family: inherit;
+  width: 100%;
+  border: 0;
+  border-bottom: 2px solid $accent;
+  outline: 0;
+  font-size: 1.1rem;
+  color: $text;
+  padding: 7px 0;
+  background: transparent;
+  transition: border-color 0.2s;
+
+  &::placeholder {
+    color: transparent;
+  }
+
+  &:placeholder-shown ~ .form__label {
+    font-size: 1.3rem;
+    cursor: text;
+    top: 20px;
+  }
+}
+
+.form__label {
+  position: absolute;
+  top: 0;
+  display: block;
+  transition: 0.2s;
+  font-size: 1rem;
+  color: $accent;
+}
+
+.form__field:focus {
+  ~ .form__label {
+    position: absolute;
+    top: 0;
+    display: block;
+    transition: 0.2s;
+    font-size: 1rem;
+    color: $primary-button;
+    font-weight: 700;
+  }
+  padding-bottom: 6px;
+  font-weight: 700;
+  border-width: 3px;
+  border-image: linear-gradient(to right, $primary-button, $secondary-button);
+  border-image-slice: 1;
+}
+
+.form__field {
+  &:required,
+  &:invalid {
+    box-shadow: none;
+  }
+}
+
+.login form button {
+  margin: 20px 0px;
+  padding: 10px 40px;
+  background-color: $primary-button;
+  border: none;
+  border-radius: 20px;
+  transition: 0.5s;
+  cursor: pointer;
+}
+
+.login form button:hover {
+  background: $accent;
+}
+
+.login form .error {
+  color: $error;
+  font-size: 0.9em;
+  text-align: center;
+}
+
+.login .account {
+  cursor: pointer;
+}
+
+.login .account a {
+  text-decoration: underline $text;
+}
+
+.login .reset-password {
+  margin: 5px;
+}
+
+.login .reset-password a {
+  text-decoration: underline $text;
+}
