@@ -33,7 +33,7 @@ const Login = () => {
 
   return (
     <div className='login'>
-        <form onSubmit={handleLogin}>
+        <form onSubmit={handleLogin} autocomplete="off">
             <h2>Login</h2>
             <div className="form__group field">
                 <input 
@@ -63,11 +63,11 @@ const Login = () => {
             {error && <p className='error'>{error}</p>}
             <p className='account'>
               Vous n'avez pas de compte? 
-              <a onClick={() => navigate("/inscription")}>S'inscrire.</a>
+              <a onClick={() => navigate("/inscription")}> S'inscrire.</a>
             </p>
             <p className='reset-password'>
               Mot de passe oublié?
-              <a onClick={() => navigate("/forget-password")}>Rénitialisé.</a>
+              <a onClick={() => navigate("/forget-password")}> Rénitialisé.</a>
             </p>
         </form>
     </div>

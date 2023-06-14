@@ -9,8 +9,11 @@ import Navbar from './assets/pages/components/navbar.jsx'
 import Page404 from './assets/pages/404';
 import ForgetPassword from './assets/pages/forgetPassword.jsx';
 import ResetPassword from './assets/pages/resetPassword.jsx';
+import EditAccount from './assets/pages/account.jsx';
+import ConfirmEdit from './assets/pages/confirm-edit.jsx';
 
 function App() {
+
   return (
     <Router>
       <Navbar/>
@@ -20,7 +23,9 @@ function App() {
         <Route path="/inscription" element={<Inscription />} />
         <Route path="/otp-verify" element={<Otp />} />
         <Route path="/forget-password" element={<ForgetPassword />} />
+        <Route path="/edit-account" element={<EditAccount />} />
         <Route path="/reset-password/:token" element={<ResetPassword />} />
+        <Route path="/confirm-edit/:token" element={<ConfirmEdit/>}/>
         <Route path="*" element={<Page404 />} />
       </Routes>
     </Router>

@@ -37,8 +37,10 @@
 }
 
 .inscription .account {
-  cursor: pointer;
+  font-size: 0.9em;
 }
+
 .inscription .account a {
-  text-decoration: underline $text;
+  cursor: pointer;
+  color: $accent;
 }

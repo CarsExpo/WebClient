@@ -1,0 +1,44 @@
+.home .hero {
+    height: 100vh;
+    width: 100vw;
+    background-image: url('../../img/background-img.jpg');
+    background-position: center;
+    background-size: cover;
+}
+
+.home .hero .glass {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.484);
+}
+
+.home .hero .glass h1 {
+    font-size: 2.5rem;
+}
+
+.home .hero .glass p {
+    width: 350px;
+    margin: 20px 0;
+    line-height: 1.5;
+    text-align: center;
+    font-weight: 700;
+    font-size: 1.2em;
+}
+
+.home .hero .glass button {
+    cursor: pointer;
+    padding: 8px 100px;
+    border-radius: 50px;
+    border: none;
+    font-size: 1.3em;
+    background-color: $primary-button;
+    transition: 0.5s;
+}
+
+.home .hero .glass button:hover {
+    background-color: $accent;
+}

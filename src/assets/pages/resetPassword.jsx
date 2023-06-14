@@ -36,7 +36,7 @@ const ResetPassword = () => {
     }
 
     return (
-        <div className='reset-pass'>
+        <div className='reset-pass' autocomplete="off">
             <form onSubmit={handleSubmit}>
                 <h2>Réinitialiser le mot de passe</h2>
                 <div className="form__group field">

@@ -20,27 +20,28 @@
   position: relative;
   padding: 15px 0 0;
   margin-top: 10px;
-  width: 70%;
+  width: 80%;
 }
 
 .form__field {
   font-family: inherit;
   width: 100%;
   border: 0;
-  border-bottom: 2px solid $accent;
+  z-index: 1 !important;
+  border-bottom: 2px solid $text;
   outline: 0;
   font-size: 1.1rem;
   color: $text;
-  padding: 7px 0;
+  padding: 10px;
   background: transparent;
-  transition: border-color 0.2s;
+  transition: border-color 0.5s;
 
   &::placeholder {
     color: transparent;
   }
 
   &:placeholder-shown ~ .form__label {
-    font-size: 1.3rem;
+    font-size: 1.1rem;
     cursor: text;
     top: 20px;
   }
@@ -52,7 +53,7 @@
   display: block;
   transition: 0.2s;
   font-size: 1rem;
-  color: $accent;
+  color: $text;
 }
 
 .form__field:focus {
@@ -62,13 +63,13 @@
     display: block;
     transition: 0.2s;
     font-size: 1rem;
-    color: $primary-button;
+    color: $accent;
     font-weight: 700;
   }
   padding-bottom: 6px;
   font-weight: 700;
   border-width: 3px;
-  border-image: linear-gradient(to right, $primary-button, $secondary-button);
+  border-image: linear-gradient(to right, $accent, $secondary-button);
   border-image-slice: 1;
 }
 
@@ -100,17 +101,20 @@
 }
 
 .login .account {
-  cursor: pointer;
+  font-size: 0.9em;
 }
 
 .login .account a {
-  text-decoration: underline $text;
+  cursor: pointer;
+  color: $accent;
 }
 
 .login .reset-password {
   margin: 5px;
+  font-size: 0.9em;
 }
 
 .login .reset-password a {
-  text-decoration: underline $text;
+  cursor: pointer;
+  color: $accent;
 }

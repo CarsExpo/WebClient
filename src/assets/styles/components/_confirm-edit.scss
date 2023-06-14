@@ -1,0 +1,39 @@
+.confirm-edit {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.confirm-edit form {
+    width: 400px;
+    height: 150px;
+    border-radius: 10px;
+    background-color: $second-background;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.confirm-edit form h2 {
+    font-size: 1.1em;
+}
+
+.confirm-edit form .button {
+    margin: 20px 0px;
+}
+
+.confirm-edit form .button button {
+    margin: 0px 10px;
+    padding: 8px 30px;
+    border: none;
+    border-radius: 5px;
+    background-color: $primary-button;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.confirm-edit form .button button:hover {
+    background-color: $accent;
+}

@@ -21,7 +21,7 @@ const ForgetPassword = () => {
 
     return (
         <div className='forget-pass'>
-            <form onSubmit={handleSubmit}>
+            <form onSubmit={handleSubmit} autocomplete="off">
                 <h2>Mot de passe oublié</h2>
                 <div className="form__group field">
                     <input

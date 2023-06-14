@@ -1,82 +1,148 @@
 header {
-    width: 100vw;
-    position: fixed;
-    z-index: 1;
-    background-color: $second-background;
-    padding: 20px;
+  width: 100vw;
+  position: fixed;
+  z-index: 1;
+  padding: 20px;
+  transition: 0.5s;
+}
+
+header.active {
+  background-color: $second-background;
 }
 
 header .logo-menu {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 header .logo-menu img {
-    height: auto;
-    width: 150px;
-    cursor: pointer;
+  height: auto;
+  width: 150px;
+  cursor: pointer;
 }
 
 header .logo-menu button {
-    border: none;
-    background-color: $primary-button;
-    border-radius: 5px;
-    padding: 5px;
-    cursor: pointer;
-    font-size: 1.8em;
-    width: 55px;
+  border: none;
+  background-color: $primary-button;
+  border-radius: 5px;
+  padding: 5px;
+  cursor: pointer;
+  font-size: 1.8em;
+  width: 55px;
 }
 
 header .navlinks ul {
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 header .navlinks ul li {
-    margin: 15px 0;
+  margin: 15px 0;
 }
 
-header .navlinks ul li button {
-    padding: 15px 60px;
-    border-radius: 20px;
-    border: none;
-    background-color: $primary-button;
-    font-size: 1.1em;
-    transition: 0.5s;
-    cursor: pointer;
+header .navlinks ul button {
+  padding: 15px 60px;
+  border-radius: 20px;
+  border: none;
+  background-color: $primary-button;
+  font-size: 1.1em;
+  transition: 0.5s;
+  cursor: pointer;
 }
 
-header .navlinks ul li button:hover {
-    background: $accent;
+header .navlinks ul button:hover {
+  background: $accent;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  margin: 2px 10px 0px 0px;
+  padding: 5px;
+  border-radius: 5px;
+  position: absolute;
+  background-color: $second-background;
+  min-width: 160px;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+    rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
+    rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+  z-index: 1;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.dropdown-content .user .user-info {
+  width: 100%;
+  height: 60px;
+  padding: 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.dropdown-content .user .user-info .email {
+  font-size: 0.8em;
+  margin: 5px 0px;
+}
+
+.dropdown-content .user .underline {
+  width: 100%;
+  height: 2px;
+  background-color: $accent;
+}
+
+.dropdown-content .options {
+  padding: 5px;
+}
+
+.dropdown-content a {
+  text-align: center;
+  cursor: pointer;
+  color: $text;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  font-size: 0.8em;
+}
+
+.dropdown-content a:hover {
+  border-radius: 5px;
+  background-color: $accent;
 }
 
 @media screen and (min-width: $large-screen) {
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
 
-    header {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-    }
+  header .logo-menu button {
+    display: none;
+  }
 
-    header .logo-menu button {
-        display: none;
-    }
+  header .navlinks ul {
+    height: 0;
+    flex-direction: row;
+  }
 
-    header .navlinks ul {
-        height: 0;
-        flex-direction: row;
-    }
+  header .navlinks ul li {
+    margin: 0 10px;
+  }
 
-    header .navlinks ul li {
-        margin: 0 10px;
-    }
-
-    header .navlinks ul li button {
-        padding: 10px 30px;
-        font-size: 1em;
-    }
+  header .navlinks ul button {
+    padding: 8px 30px;
+    font-size: 1em;
+  }
 }
