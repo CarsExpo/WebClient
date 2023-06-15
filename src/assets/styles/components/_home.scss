@@ -1,9 +1,14 @@
+.home {
+    overflow: hidden;
+}
+
 .home .hero {
     height: 100vh;
     width: 100vw;
     background-image: url('../../img/background-img.jpg');
     background-position: center;
     background-size: cover;
+    overflow-y: hidden !important;
 }
 
 .home .hero .glass {
@@ -41,4 +46,350 @@
 
 .home .hero .glass button:hover {
     background-color: $accent;
+}
+
+.first-section {
+    height: 100vh;
+    opacity: 1;
+    transform: translateY(0);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.first-section .slide-in.active {
+    width: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.first-section .title h2 {
+    text-align: center;
+    font-size: 1em;
+}
+
+.first-section .title .underline {
+    margin: 5px 0px;
+    width: 150px;
+    height: 0.5vh;
+    background-color: $text;
+}
+
+.first-section .container {
+    height: auto;
+    width: 80vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 4em 1em;
+    border-radius: 10px;
+    background-color: $second-background;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.first-section .container .text p {
+    text-align: center;
+    margin: 10px 0px;
+    line-height: 1.5;
+}
+
+
+
+.second-section {
+    padding: 25px 0px;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100vw;
+}
+
+.second-section .container {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-row-gap: 20px;
+    place-items: center;
+    height: 310vh;
+    width: 100vw;
+}
+
+.second-section .title {
+    margin: 80px 0px 30px 0px;
+    text-align: center;
+}
+
+.second-section .container .box {
+    height: auto;
+    width: 300px;
+    border-radius: 10px;
+    padding: 20px;
+    background-color: $second-background;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    overflow: hidden;
+    transition: transform 0.3s ease-in-out;
+    cursor: pointer;
+}
+
+.second-section .container .box:hover {
+    transform: scale(1.1);
+}
+
+.second-section .container .box .header {
+    height: 300px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.second-section .container .box .body {
+    font-size: 0.8em;
+    line-height: 1.6;
+    text-align: center;
+}
+
+.second-section .container .history .header img {
+    width: 250px;
+    margin: 38px 0px;
+}
+
+.second-section .container .history .header h2 {
+    position: relative;
+    z-index: 1;
+}
+
+.second-section .container .history .header .underline {
+    position: relative;
+    content: '';
+    height: 13px;
+    width: 170px;
+    background-color: $accent;
+    bottom: 0;
+    left: 20;
+    top: -15px;
+}
+
+.second-section .container .cars .header img {
+    width: 250px;
+    margin: 15px 0px;
+}
+
+.second-section .container .cars .header h2 {
+    position: relative;
+    z-index: 1;
+}
+
+.second-section .container .cars .header .underlines {
+    position: relative;
+    content: '';
+    height: 13px;
+    width: 170px;
+    background-color: #30375e;
+    bottom: 0;
+    left: 20;
+    top: -15px;
+}
+
+.second-section .container .expo .header img {
+    width: 250px;
+    margin: 15px 0px;
+}
+
+.second-section .container .expo .header h2 {
+    position: relative;
+    z-index: 1;
+}
+
+.second-section .container .expo .header .underlines {
+    position: relative;
+    content: '';
+    height: 13px;
+    width: 190px;
+    background-color: #30375e;
+    bottom: 0;
+    left: 20;
+    top: -15px;
+}
+
+
+.thrid-section {
+    height: auto;
+    width: 100vw;
+    padding: 20px 0px;
+}
+
+.thrid-section .slide-in .faq {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.thrid-section .slide-in .faq .box {
+    width: 350px;
+    height: auto;
+    padding: 10px;
+    background-color: $second-background;
+    border-radius: 5px;
+    margin: 10px;
+}
+
+.thrid-section .slide-in .faq .box .header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 8px;
+}
+
+.thrid-section .slide-in .faq .box .header svg {
+    font-size: 1.5em;
+    margin: 0px 0px 0px 15px;
+    cursor: pointer;
+}
+
+.thrid-section .slide-in .faq .box .body {
+   padding: 10px;
+   word-wrap: break-word;
+   white-space: pre-wrap;
+}
+
+.thrid-section .slide-in .faq .box .body  p {
+    height: auto;
+    width: auto;
+    font-size: 0.7em;
+    text-align: start;
+    line-height: 1.6;
+}
+
+@media screen and (min-width: $medium-screen) {
+    .first-section {
+        height: 60vh;
+        padding: 100px;
+    }
+
+    .first-section .container .text p {
+        text-align: start;
+        font-size: 0.9em;
+    }
+
+    .first-section .slide-in.active {
+        width: auto;
+    }
+
+    .second-section .container .expo .header .underlines {
+        top: -11px;
+    }
+
+    .second-section .container .cars .header .underlines {
+        height: 12px;
+        top: -10px;
+    }
+
+    .second-section .container .box .header {
+        height: 236px;
+    }
+
+    .second-section {
+        height: 175vh;
+    }
+
+    .second-section .slide-in.active {
+        height: 100%;
+        width: auto;
+    }
+    
+    
+    .second-section .container {
+        grid-template-columns: 1fr 1fr;
+        width: 687px;
+        margin: 15px 0px;
+        width: 687px;
+        height: 118vh;
+    }
+
+    .second-section .container .box {
+        height: 468px;
+    }
+    
+
+    .second-section .container .header img {
+        margin: 24px 0px;
+        width: 229px
+    }
+    
+    .second-section .container .history .header img {
+        margin: 24px 0px;
+    }
+
+    .second-section .container .cars .header img {
+        margin: 11px 0px;
+    }
+
+    .thrid-section .slide-in .faq .box {
+        width: 615px;
+    }
+
+    .thrid-section .slide-in .faq .body .respons p {
+        width: 600px;
+        text-align: start;
+        font-size: 0.8em;
+    }
+}
+
+@media screen and (min-width: $large-screen) {
+    .first-section .container {
+        max-width: 1000px;
+    }
+
+    .first-section .title h2 {
+        font-size: 1.5em;
+    }
+
+    .first-section .title .underline {
+        width: 230px;
+    }
+
+    .first-section .container .text p {
+        font-size: 1.3em;
+    }
+
+    .second-section {
+        height: 100vh;
+    }
+    
+
+    .second-section .container .box {
+        height: 500px;
+        padding: 11px;
+    }
+
+    .second-section .container .box .body p {
+        font-size: 1em;
+    }
+
+    .second-section .container .box .header img { 
+        width: 212px;
+    }
+    
+    .second-section .container {
+        grid-template-columns: 1fr 1fr 1fr;
+        height: 80vh;
+        overflow: hidden;
+        width: 1100px;
+    }
+
+    .thrid-section .slide-in .faq .box {
+        width:  750px;
+    }
+
+    .thrid-section .slide-in .faq .body .respons p {
+        width: 720px;
+        text-align: start;
+        font-size: 0.9em;
+    }
 }

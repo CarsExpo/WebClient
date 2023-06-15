@@ -1,13 +1,14 @@
 header {
   width: 100vw;
   position: fixed;
-  z-index: 1;
-  padding: 20px;
+  z-index: 2;
+  padding: 10px  30px;
   transition: 0.5s;
 }
 
 header.active {
   background-color: $second-background;
+  box-shadow: rgba(0, 0, 0, 0.09) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
 }
 
 header .logo-menu {
@@ -41,7 +42,45 @@ header .navlinks ul {
 }
 
 header .navlinks ul li {
-  margin: 15px 0;
+  margin: 5px 0;
+
+}
+
+header .navlinks ul li a {
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+}
+
+header .navlinks ul li a svg {
+  margin: 0px 10px;
+}
+
+header .navlinks ul li .links:before,
+  a:after {
+    content: "";
+    position: absolute;
+    height: 5px;
+    width: 0;
+    background-color: $primary-button;
+    transition: 0.5s;
+}
+
+header .navlinks ul li .links:after {
+    left: 0;
+    bottom: 0px;
+}
+
+header .navlinks ul li .links:before {
+    right: 0;
+    top: 0px;
+}
+
+header .navlinks ul li .links:hover {
+    color: $accent;
 }
 
 header .navlinks ul button {

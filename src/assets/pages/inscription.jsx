@@ -9,6 +9,7 @@ const Inscription = () => {
   const [email, setEmail] = useState("");
   const [lastname, setLastName] = useState("");
   const [firstname, setFirstName] = useState("");
+  const [discord, setDiscord] = useState("");
   const [password, setPassword] = useState("");
   const [confirmPassword, setConfirmPassword] = useState("");
   const [error, setError] = useState("");
@@ -31,6 +32,7 @@ const Inscription = () => {
       const response = await axios.post(API_BASE_URL + '/api/auth/register', {
         lastname,
         firstname,
+        discord,
         email,
         password,
       }, {
@@ -71,6 +73,10 @@ const Inscription = () => {
         <div className="form__group field">
           <input type="input" className="form__field" placeholder="Email" value={email} onChange={e => setEmail(e.target.value)} required />
           <label htmlFor="email" className="form__label">Email</label>
+        </div>
+        <div className="form__group field">
+          <input type="input" className="form__field" placeholder="Discord" value={discord} onChange={e => setDiscord(e.target.value)} required />
+          <label htmlFor="discord" className="form__label">Pseudo discord</label>
         </div>
         <div className="form__group field">
           <input type="password" className="form__field" placeholder="Mot de passe" value={password} onChange={e => setPassword(e.target.value)} required />

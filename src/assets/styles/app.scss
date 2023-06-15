@@ -22,7 +22,9 @@
     box-sizing: border-box;
     font-family: 'Inter', sans-serif;   
     list-style-type: none;
-    color: $text
+    color: $text;
+    outline: none;
+    text-decoration: none;
 }
 
 #root {
@@ -31,3 +33,11 @@
     background-color: $background;
 }
 
+body {
+    background-color: $background;
+    overflow-x: hidden;
+}
+
+html {
+    scroll-behavior: smooth;
+}

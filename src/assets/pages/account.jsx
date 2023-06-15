@@ -10,6 +10,7 @@ const EditAccount = () => {
     const [email, setEmail] = useState("");
     const [firstname, setFirstName] = useState("");
     const [lastname, setLastName] = useState("");
+    const [discord, setDiscord] = useState("");
     const [password, setPassword] = useState("");
     const [message, setMessage] = useState("");
 
@@ -29,6 +30,7 @@ const EditAccount = () => {
                 setEmail(response.data.email);
                 setFirstName(response.data.firstname);
                 setLastName(response.data.lastname);
+                setDiscord(response.data.discord);
             })
             .catch((error) => {
                 console.error("There was an error!", error);
@@ -37,7 +39,7 @@ const EditAccount = () => {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        axios.post(API_BASE_URL + "/api/user/edit", { email, firstname, lastname, password, }, { headers: { "x-auth-token": token }, })
+        axios.post(API_BASE_URL + "/api/user/edit", { email, firstname, lastname, password, discord }, { headers: { "x-auth-token": token }, })
             .then((response) => {
                 setMessage("Compte mis à jour avec succès!");
             })
@@ -90,6 +92,19 @@ const EditAccount = () => {
                     />
                     <label htmlFor="email" className="form__label">
                         Email
+                    </label>
+                </div>
+                <div className="form__group field">
+                    <input
+                        type="input"
+                        className="form__field"
+                        placeholder="Discord"
+                        name="discord"
+                        value={discord}
+                        onChange={(e) => setDiscord(e.target.value)}
+                    />
+                    <label htmlFor="discord" className="form__label">
+                        Pseudo discord
                     </label>
                 </div>
                 <div className="form__group field">
