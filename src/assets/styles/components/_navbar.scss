@@ -42,8 +42,11 @@ header .navlinks ul {
 }
 
 header .navlinks ul li {
-  margin: 5px 0;
-
+  display: flex;
+  align-items: center;
+  font-size: 1.1em;
+  cursor: pointer;
+  margin: 15px 0px;
 }
 
 header .navlinks ul li a {
@@ -60,28 +63,33 @@ header .navlinks ul li a svg {
 }
 
 header .navlinks ul li .links:before,
-  a:after {
-    content: "";
-    position: absolute;
-    height: 5px;
-    width: 0;
-    background-color: $primary-button;
-    transition: 0.5s;
+a:after {
+  content: "";
+  position: absolute;
+  height: 5px;
+  width: 0;
+  background-color: $primary-button;
+  transition: 0.5s;
 }
 
 header .navlinks ul li .links:after {
-    left: 0;
-    bottom: 0px;
+  left: 0;
+  bottom: 0px;
 }
 
 header .navlinks ul li .links:before {
-    right: 0;
-    top: 0px;
+  right: 0;
+  top: 0px;
 }
 
 header .navlinks ul li .links:hover {
-    color: $accent;
+  color: $accent;
 }
+
+header .navlinks ul li .links:hover:after,
+  header .navlinks ul li .links:hover:before {
+  width: 100%;
+} 
 
 header .navlinks ul button {
   padding: 15px 60px;
