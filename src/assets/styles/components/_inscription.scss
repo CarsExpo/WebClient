@@ -3,6 +3,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  margin: 0px 0 0 75px;
 }
 
 .inscription form {
@@ -11,9 +12,10 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 360px;
-  padding: 30px;
+  width: 330px;
+  padding: 20px;
   border-radius: 10px;
+  
 }
 
 .inscription form button {

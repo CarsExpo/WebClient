@@ -14,7 +14,6 @@ const ForgetPassword = () => {
             await axios.post(API_BASE_URL + '/api/auth/forget-password', { email });
             setMessage('Email de réinitialisation de mot de passe envoyé avec succès.');
         } catch (error) {
-            console.log(error.response.data);
             setMessage(error.response?.data?.message || 'Une erreur s\'est produite. Veuillez réessayer plus tard.');
         }
     }

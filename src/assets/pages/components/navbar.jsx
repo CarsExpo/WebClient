@@ -105,7 +105,7 @@ const Navbar = () => {
         }
       } catch (err) {
         console.log(err);
-      }
+      } 
     };
 
     fetchUser();

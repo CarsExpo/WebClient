@@ -1,42 +1,65 @@
 /*Import Section*****************/
 /*Base theme, breakpoint etc****/
-    @import './data/theme1.scss';
-    @import './data/breakpoint.scss';
-    @import url("https://fonts.googleapis.com/css2?family=Inter:wght@500&display=swap");
+@import "./data/theme1.scss";
+@import "./data/breakpoint.scss";
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@500&display=swap");
 /*Components / pages importation****/
-    @import './components/_navbar';
-    @import './components/_login';
-    @import './components/_inscription';
-    @import './components/_otp';
-    @import './components/_home';
-    @import './components/_404';
-    @import './components/_forget-password';
-    @import './components/_reset-password';
-    @import './components/_account';
-    @import './components/_confirm-edit';
+@import "./components/_navbar";
+@import "./components/_login";
+@import "./components/_inscription";
+@import "./components/_otp";
+@import "./components/_home";
+@import "./components/_404";
+@import "./components/_forget-password";
+@import "./components/_reset-password";
+@import "./components/_account";
+@import "./components/_confirm-edit";
+@import "./components/_sidebar";
+@import "./components/_fetchAllUser";
 /**************************/
 
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Inter', sans-serif;   
-    list-style-type: none;
-    color: $text;
-    outline: none;
-    text-decoration: none;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Inter", sans-serif;
+  list-style-type: none;
+  color: $text;
+  outline: none;
+  text-decoration: none;
 }
 
 #root {
-    height: 100vh;
-    width: 100vw;
+  height: 100vh;
+  width: 100vw;
 }
 
 body {
-    background-color: $background;
-    overflow-x: hidden;
+  background-color: $background;
+  overflow-x: hidden;
+}
+
+/* width */
+*::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+*::-webkit-scrollbar-track {
+  border-radius: 10px;
+}
+
+/* Handle */
+*::-webkit-scrollbar-thumb {
+  background: $primary-button;
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+*::-webkit-scrollbar-thumb:hover {
+  background: $accent;
 }
 
 html {
-    scroll-behavior: smooth;
+  scroll-behavior: smooth;
 }

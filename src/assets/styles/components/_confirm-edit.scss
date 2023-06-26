@@ -3,10 +3,11 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    margin: 0px 0 0 80px;
 }
 
 .confirm-edit form {
-    width: 400px;
+    width: 340px;
     height: 150px;
     border-radius: 10px;
     background-color: $second-background;

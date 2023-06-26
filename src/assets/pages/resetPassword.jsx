@@ -30,7 +30,7 @@ const ResetPassword = () => {
             await axios.post(API_BASE_URL + `/api/auth/reset-password/${token}`, { password });
             navigate('/');
         } catch (error) {
-            console.log(error.response.data);
+            console.log(error.response?.data);
             setMessage(error.response?.data?.message || 'Une erreur s\'est produite. Veuillez réessayer plus tard.');
         }
     }
