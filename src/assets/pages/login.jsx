@@ -61,7 +61,7 @@ const Login = () => {
             </div>
             <button>Se connecter</button>
             {error && <p className='error'>{error}</p>}
-            <p className='account'>
+            <p className='account-log'>
               Vous n'avez pas de compte? 
               <a onClick={() => navigate("/inscription")}> S'inscrire.</a>
             </p>
