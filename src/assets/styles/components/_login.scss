@@ -102,13 +102,14 @@
   text-align: center;
 }
 
-.login .account {
+.login .account-log {
   font-size: 0.9em;
 }
 
 .login .account-log a {
   cursor: pointer;
   color: $accent;
+  font-size: 0.9em;
 }
 
 .login .reset-password {

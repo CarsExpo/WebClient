@@ -102,7 +102,7 @@ const Inscription = () => {
         </div>
         <button type="submit">S'inscrire</button>
         {error && <p className='error'>{error}</p>}
-        <p className='account'>Vous avez un compte? <a onClick={() => navigate("/login")}>Se connecter.</a></p>
+        <p className='account-log'>Vous avez un compte? <a onClick={() => navigate("/login")}>Se connecter.</a></p>
       </form>
     </div>
   );
