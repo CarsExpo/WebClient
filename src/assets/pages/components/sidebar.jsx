@@ -73,7 +73,7 @@ const Sidebar = () => {
             </div>
             <ul class="nav-list">
                 <li>
-                    <a onClick={() => navigate("/")}>
+                    <a onClick={() => navigate("/#")}>
                         <i class='bx bx-home' ></i>
                         <span class="links_name">Acceuil</span>
                     </a>
@@ -89,7 +89,7 @@ const Sidebar = () => {
                 {isAuthenticated ? (
                     <>
                         <li>
-                            <a onClick={() => navigate("/edit-account")}>
+                            <a onClick={() => navigate("/account")}>
                                 <i class='bx bx-user' ></i>
                                 <span class="links_name">Mon compte</span>
                             </a>

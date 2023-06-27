@@ -8,7 +8,11 @@
     margin: 0 0 0 40px;
 }
 
-.modal {
+.fetch-alluser h1 {
+    font-size: 1.2em;
+}
+
+.fetch-alluser .modal {
     position: absolute;
     display: flex;
     justify-content: center;
@@ -20,23 +24,23 @@
     margin-right: 80px;
 }
 
-.modal .modal-content {
+.fetch-alluser .modal .modal-content {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     padding: 20px;
-    width: 400px;
+    width: 360px;
     background-color: $background;
     border-radius: 5px;
 }
 
-.modal .modal-content .error-message {
+.fetch-alluser .modal .modal-content .error-message {
     font-size: 0.9em;
     color: $error;
 }
 
-.modal .modal-content .button-group button {
+.fetch-alluser .modal .modal-content .button-group button {
     background: none;
     border: 2px solid $primary-button;
     font: inherit;
@@ -54,20 +58,20 @@
     }
 }
 
-.modal .modal-content .button-group button:hover,
-.modal .modal-content .button-group button:focus {
+.fetch-alluser .modal .modal-content .button-group button:hover,
+.fetch-alluser .modal .modal-content .button-group button:focus {
     box-shadow: inset 10em 0 0 0 $primary-button;
 }
 
 
-.modal .modal-content .form__group {
+.fetch-alluser .modal .modal-content .form__group {
     position: relative;
     padding: 15px 0 0;
     margin-top: 10px;
     width: 80%;
 }
 
-.modal .modal-content .form__field {
+.fetch-alluser .modal .modal-content .form__field {
     font-family: inherit;
     width: 100%;
     border: 0;
@@ -91,7 +95,7 @@
     }
 }
 
-.modal .modal-content .form__label {
+.fetch-alluser .modal .modal-content .form__label {
     position: absolute;
     top: 0;
     display: block;
@@ -100,7 +104,7 @@
     color: $text;
 }
 
-.modal .modal-content .form__field:focus {
+.fetch-alluser .modal .modal-content .form__field:focus {
     ~.form__label {
         position: absolute;
         top: 0;
@@ -118,7 +122,7 @@
     border-image-slice: 1;
 }
 
-.modal .modal-content .form__field {
+.fetch-alluser .modal .modal-content .form__field {
 
     &:required,
     &:invalid {
@@ -126,13 +130,13 @@
     }
 }
 
-.modal .modal-content form {
+.fetch-alluser .modal .modal-content form {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-.modal .modal-content form .input-field {
+.fetch-alluser .modal .modal-content form .input-field {
     display: grid;
     grid-template-columns: 1fr 1fr;
     place-items: center;
@@ -186,7 +190,7 @@
 }
 
 .fetch-alluser table {
-    width: 300px;
+    width: 260px;
     border-collapse: collapse;
     overflow-y: scroll;
     border-collapse: separate;
@@ -230,7 +234,54 @@ td {
     cursor: pointer;
 }
 
+
+.fetch-alluser .select-menu {
+    position: relative;
+    top: 20px;
+    right: 25px;
+}
+
+.fetch-alluser select {
+    margin: 10px 0px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    width: 200px;
+    padding: 6px 25px;
+    font-size: 0.9em;
+    letter-spacing: 0.5px;
+    cursor: pointer;
+    background-color: $primary-button;
+    color: $text;
+    border: 6px solid $primary-button;
+    border-radius: 10px;
+    background-repeat: no-repeat;
+    background-size: 17px;
+    background-position: 202px 13px;
+    outline: none;
+    box-shadow: 0 0 20px rgb(20 20 30 / 25%);
+}
+.fetch-alluser select::-ms-expand {
+    display: none;
+}
+
+.fetch-alluser select option {
+    background-color: $primary-button;
+    letter-spacing: 1.2px;
+    font-weight: 400;
+    font-size: 18px;
+    color: $text;
+}
+
+.fetch-alluser .selected {
+    display: none;
+}
+
 @media screen and (max-width: 800px) {
+
+    .fetch-alluser h1 {
+        font-size: 1.5em;
+    }
 
     .fetch-alluser tr td,
     .fetch-alluser tr th {
@@ -281,46 +332,4 @@ td {
         margin-right: 1rem;
         font-weight: bold;
     }
-}
-
-.select-menu {
-    position: relative;
-    top: 20px;
-    right: 25px;
-}
-
-select {
-    margin: 10px 0px;
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    appearance: none;
-    width: 200px;
-    padding: 6px 25px;
-    font-size: 0.9em;
-    letter-spacing: 0.5px;
-    cursor: pointer;
-    background-color: $primary-button;
-    color: $text;
-    border: 6px solid $primary-button;
-    border-radius: 10px;
-    background-repeat: no-repeat;
-    background-size: 17px;
-    background-position: 202px 13px;
-    outline: none;
-    box-shadow: 0 0 20px rgb(20 20 30 / 25%);
-}
-select::-ms-expand {
-    display: none;
-}
-
-select option {
-    background-color: $primary-button;
-    letter-spacing: 1.2px;
-    font-weight: 400;
-    font-size: 18px;
-    color: $text;
-}
-
-.selected {
-    display: none;
 }

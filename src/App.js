@@ -11,11 +11,11 @@ import ForgetPassword from './assets/pages/forgetPassword.jsx';
 import ResetPassword from './assets/pages/resetPassword.jsx';
 import EditAccount from './assets/pages/account.jsx';
 import ConfirmEdit from './assets/pages/confirm-edit.jsx';
-import ListUser from './assets/pages/listUser.jsx';
+import AdminUser from './assets/pages/adminUser.jsx';
 import { API_BASE_URL } from './config.js';
 
 function PrivateRoute({ element, adminOnly }) {
-  const [isLoading, setIsLoading] = useState(true); // new loading state
+  const [isLoading, setIsLoading] = useState(true);
   const [isAuthenticated, setIsAuthenticated] = useState(false);
   const [isAdmin, setIsAdmin] = useState(false);
 
@@ -37,14 +37,14 @@ function PrivateRoute({ element, adminOnly }) {
           console.log(error);
         }
       }
-      setIsLoading(false); // finished loading user data
+      setIsLoading(false); 
     };
 
     checkAdminStatus();
   }, []);
 
   if (isLoading) {
-    return null; // or a loading spinner, for instance
+    return null; 
   }
 
   if (adminOnly && !isAdmin) {
@@ -72,8 +72,8 @@ function App() {
         <Route path="/forget-password" element={<ForgetPassword />} />
         <Route path="/reset-password/:token" element={<ResetPassword />} />
         <Route path="/confirm-edit/:token" element={<ConfirmEdit />} />
-        <Route path="/edit-account" element={<EditAccount />} />
-        <Route path="/admin/list-user" element={<PrivateRoute element={<ListUser />} adminOnly={true} />} />
+        <Route path="/account" element={<EditAccount />} />
+        <Route path="/admin/list-user" element={<PrivateRoute element={<AdminUser />} adminOnly={true} />} />
         <Route path="*" element={<Page404 />} />
       </Routes>
     </Router>
