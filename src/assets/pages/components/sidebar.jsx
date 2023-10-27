@@ -79,13 +79,6 @@ const Sidebar = () => {
                     </a>
                     <span class="tooltip">Acceuil</span>
                 </li>
-                <li>
-                    <a href="#">
-                        <i class='bx bx-news' ></i>
-                        <span class="links_name">Articles</span>
-                    </a>
-                    <span class="tooltip">Articles</span>
-                </li>
                 {isAuthenticated ? (
                     <>
                         <li>
